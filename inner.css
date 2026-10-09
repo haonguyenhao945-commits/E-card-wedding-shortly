@@ -35,27 +35,13 @@
 .pig--flip { transform: scaleX(-1); }
 .amp { font-family: 'Great Vibes', cursive; font-size: 37.798px; line-height: normal; white-space: nowrap; }
 
-/* Lời báo tin phía trên lịch lễ */
-.invite__title { font-size: 14px; font-weight: 500; line-height: normal; text-align: center; }
-.side-title { width: 100%; font-size: 14px; font-weight: 700; line-height: normal; text-align: center; text-transform: uppercase; letter-spacing: .08em; }
-
-/* Lịch lễ của hai bên */
-.events { width: 100%; display: flex; flex-direction: column; align-items: center; gap: 26.766px; }
-.events .side-title:not(:first-child) { margin-top: 18px; }
-.event { width: 100%; display: flex; flex-direction: column; align-items: center; gap: 8px; }
-.ev-title { width: 100%; font-size: 12px; font-weight: 600; line-height: normal; text-align: center; }
-.ev-row { width: 100%; display: flex; justify-content: space-between; align-items: center; font-size: 12px; font-weight: 400; line-height: normal; }
-.ev-row--top { align-items: flex-start; }
-.ev-time { white-space: nowrap; text-align: center; }
-.ev-date { white-space: nowrap; text-align: left; }
-.ev-time--multi { text-align: left; display: flex; flex-direction: column; }
-.ev-time--multi > .split { display: block; }
-.ev-place { flex: none; text-align: left; }
-.ev-gap { flex: 1 0 0; align-self: stretch; display: flex; justify-content: center; min-width: 1px; }
-.ev-sep { display: block; width: .5px; align-self: stretch; background: #430815; }
-.ev-sep--short { width: .5px; height: 13.383px; align-self: auto; }
-.rv-group .ev-sep { opacity: 0; transition: opacity .8s ease calc(var(--rd, 0s) + .3s); }
-.rv-group.is-in .ev-sep { opacity: 1; }
+/* Tin vui hôn lễ: tiêu đề, lời báo tin, hai ngày lễ, lời cảm ơn */
+.news { width: 100%; display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center; }
+.news__title { font-size: 14px; font-weight: 700; letter-spacing: .14em; line-height: normal; }
+.news__lead { width: 300px; font-size: 14px; font-weight: 400; line-height: 1.5; }
+.news__dates { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.news__date { font-family: 'Great Vibes', cursive; font-size: 32px; line-height: normal; white-space: nowrap; }
+.news__thanks { width: 318px; font-size: 12px; font-weight: 400; line-height: 1.6; color: rgba(67, 8, 21, .82); }
 
 /* ------------------------------------------------------------- Count down */
 .countdown { position: relative; align-self: stretch; margin-top: 56px; height: 822px; padding: 8px; background: #530818; }
@@ -120,8 +106,6 @@
 .thanks { margin-top: 16px; width: 291.8px; height: 30px; font-size: 12px; font-weight: 500; line-height: normal; text-align: center; }
 /* Dải hoạ tiết nằm sát đáy trang: trang kết thúc ngay ở mép dưới của nó, không còn khoảng trắng */
 .pattern-footer { position: absolute; left: 0; bottom: 0; width: 390px; height: 100px; background: url("assets/Pattern%20footer.svg") center bottom / 390px 100px no-repeat; }
-
-@media (prefers-reduced-motion: reduce) { .rv-group .ev-sep { opacity: 1; transition: none; } }
 
 /* Dấu sáp cuối trang bấm được: đóng thiệp, quay về phong bì chưa mở */
 .end-seal[data-close-envelope] { cursor: pointer; }
