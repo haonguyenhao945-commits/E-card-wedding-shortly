@@ -46,7 +46,7 @@
       newsTitle: 'TIN VUI HÔN LỄ',
       newsLead: 'Trân trọng báo tin vui đến gia đình, bạn bè và những người thân yêu.',
       dateBride: 'VU QUY | 19.12.2026', placeBride: '(Bảo Lộc)', dateGroom: 'TÂN HÔN | 20.12.2026', placeGroom: '(Củ Chi)',
-      newsThanks: 'Chúng mình xin chân thành cảm ơn tình yêu thương, sự quan tâm và những lời chúc phúc của mọi người. Cảm ơn vì đã cùng chúng mình chia sẻ niềm vui trong dấu mốc đáng nhớ này.',
+      newsThanks: 'Chúng mình xin chân thành cám ơn tình yêu thương, sự quan tâm và những lời chúc phúc của mọi người. Cám ơn vì đã cùng chúng mình chia sẻ niềm vui trong dấu mốc đáng nhớ này.',
       signoff: 'With love & gratitude.',
       closeAria: 'Đóng thiệp',
     },
