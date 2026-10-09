@@ -37,7 +37,7 @@
 
 /* Tin vui hôn lễ (Figma 125:6259): tiêu đề trên cặp tên; dưới tên là lời báo tin + hai ngày lễ */
 .news__title { font-size: 14px; font-weight: 700; line-height: normal; text-align: center; }
-.news__lead { width: 296px; font-size: 14px; font-weight: 400; line-height: normal; text-align: center; }
+.news__lead { width: 340px; font-size: 14px; font-weight: 400; line-height: normal; text-align: center; }
 .news__dates { display: flex; flex-direction: column; align-items: center; gap: 7px; }
 .news__date { font-size: 14px; font-weight: 400; line-height: normal; text-align: center; white-space: nowrap; }
 .news__date b { font-weight: 700; }
