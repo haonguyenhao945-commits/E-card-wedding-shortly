@@ -17,7 +17,7 @@
 .letter::-webkit-scrollbar { display: none; }
 .letter:focus-visible { outline: none; }
 
-.page { position: relative; width: 390px; padding-bottom: 100px; overflow: hidden; display: flex; flex-direction: column; align-items: center; color: #430815; font-family: 'Inter', system-ui, sans-serif; }
+.page { position: relative; width: 390px; padding-bottom: 124px; overflow: hidden; display: flex; flex-direction: column; align-items: center; color: #430815; font-family: 'Inter', system-ui, sans-serif; }
 .page p { margin: 0; }
 .page img { display: block; max-width: none; user-select: none; -webkit-user-drag: none; }
 
@@ -26,7 +26,7 @@
 .hero { position: absolute; left: 0; top: 0; width: 390px; height: 519px; }
 
 /* ------------------------------------------------------- Frame 78: tên + lịch lễ */
-.info { position: relative; margin-top: 501px; width: 358px; display: flex; flex-direction: column; align-items: center; gap: 36px; } /* Figma: 60 — rút lại vì thêm dòng gợi ý, để hai nút vẫn nằm trong màn hình đầu */
+.info { position: relative; margin-top: 501px; width: 358px; display: flex; flex-direction: column; align-items: center; gap: 40px; } /* Figma: 60 — rút lại vì thêm dòng gợi ý, để hai nút vẫn nằm trong màn hình đầu */
 .couple { width: 100%; display: flex; flex-direction: column; align-items: center; gap: 10.309px; }
 .person { display: flex; flex-direction: column; align-items: center; gap: 5.154px; }
 .role { font-size: 14px; font-weight: 500; line-height: normal; text-align: center; }
@@ -35,16 +35,15 @@
 .pig--flip { transform: scaleX(-1); }
 .amp { font-family: 'Great Vibes', cursive; font-size: 37.798px; line-height: normal; white-space: nowrap; }
 
-/* Tin vui hôn lễ: tiêu đề, lời báo tin, hai ngày lễ, lời cảm ơn */
-.news { width: 100%; display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center; }
-.news__title { font-size: 14px; font-weight: 700; letter-spacing: .14em; line-height: normal; }
-.news__lead { width: 300px; font-size: 14px; font-weight: 400; line-height: 1.5; }
-.news__dates { display: flex; flex-direction: column; align-items: center; gap: 6px; }
-.news__date { font-family: 'Great Vibes', cursive; font-size: 32px; line-height: normal; white-space: nowrap; }
-.news__thanks { width: 318px; font-size: 12px; font-weight: 400; line-height: 1.6; color: rgba(67, 8, 21, .82); }
+/* Tin vui hôn lễ (Figma 125:6259): tiêu đề trên cặp tên; dưới tên là lời báo tin + hai ngày lễ */
+.news__title { font-size: 14px; font-weight: 700; line-height: normal; text-align: center; }
+.news__lead { width: 296px; font-size: 14px; font-weight: 400; line-height: normal; text-align: center; }
+.news__dates { display: flex; flex-direction: column; align-items: center; gap: 7px; }
+.news__date { font-size: 14px; font-weight: 400; line-height: normal; text-align: center; white-space: nowrap; }
+.news__date b { font-weight: 700; }
 
 /* ------------------------------------------------------------- Count down */
-.countdown { position: relative; align-self: stretch; margin-top: 56px; height: 822px; padding: 8px; background: #530818; }
+.countdown { position: relative; align-self: stretch; margin-top: 42px; height: 822px; padding: 8px; background: #530818; }
 .cd-photos { display: flex; flex-direction: column; gap: 4px; width: 374px; }
 /* ba ô 374×266, bo 16px; mỗi ô là một lát của cùng một ảnh rừng 450×800 */
 .cd-photo { position: relative; height: 266px; border-radius: 16px; overflow: hidden; }
@@ -55,8 +54,8 @@
 .cd-cell span { width: 100%; font-size: 12px; font-weight: 400; color: #a4a183; }
 .cd-colon { font-size: 24px; font-weight: 700; color: #a4a183; white-space: nowrap; }
 
-.end-seal { margin-top: 38px; flex: none; width: 122px; height: 122px; object-fit: cover; filter: drop-shadow(0 4px 8px rgba(37, 39, 25, .32)); }
-.end-date { margin-top: 16px; width: 202px; height: 50px; font-family: 'Great Vibes', cursive; font-size: 40px; line-height: normal; text-align: center; white-space: nowrap; }
+.end-seal { position: relative; margin-top: -61px; flex: none; width: 122px; height: 122px; object-fit: cover; filter: drop-shadow(0 4px 8px rgba(37, 39, 25, .32)); }
+.page .end-date { margin-top: 5px; width: 202px; height: 50px; font-family: 'Great Vibes', cursive; font-size: 40px; line-height: normal; text-align: center; white-space: nowrap; }
 
 /* ==========================================================================
    Hiện dần theo cuộn: IntersectionObserver (app.js) thêm .is-in khi khối cuộn tới
@@ -103,7 +102,8 @@
 }
 
 /* Lời cảm ơn + dải hoạ tiết cuối trang (Frame 85) */
-.thanks { margin-top: 16px; width: 291.8px; height: 30px; font-size: 12px; font-weight: 500; line-height: normal; text-align: center; }
+.page .end-note { margin-top: 8px; width: 346px; font-size: 14px; font-weight: 400; line-height: 21px; text-align: center; }
+.page .thanks { margin-top: 37px; width: 291.8px; font-size: 14px; font-weight: 600; line-height: normal; text-align: center; }
 /* Dải hoạ tiết nằm sát đáy trang: trang kết thúc ngay ở mép dưới của nó, không còn khoảng trắng */
 .pattern-footer { position: absolute; left: 0; bottom: 0; width: 390px; height: 100px; background: url("assets/Pattern%20footer.svg") center bottom / 390px 100px no-repeat; }
 
