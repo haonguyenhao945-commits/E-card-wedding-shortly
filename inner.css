@@ -45,14 +45,17 @@
 /* ------------------------------------------------------------- Count down */
 .countdown { position: relative; align-self: stretch; margin-top: 42px; height: 822px; padding: 8px; background: #530818; }
 .cd-photos { display: flex; flex-direction: column; gap: 4px; width: 374px; }
-/* ba ô 374×266, bo 16px; mỗi ô là một lát của cùng một ảnh rừng 450×800 */
-.cd-photo { position: relative; height: 266px; border-radius: 16px; overflow: hidden; }
-.cd-photo img { position: absolute; left: 50%; width: 450px; height: 800px; object-fit: cover; transform: translateX(-50%); }
+/* ba ô 374×266, bo 16px; mỗi ô một ảnh cưới pha màu screen lên nền đỏ #530818 (Figma 205:465) */
+.cd-photo { position: relative; height: 266px; border-radius: 16px; overflow: hidden; background: #530818; isolation: isolate; }
+.cd-img { position: absolute; max-width: none; object-fit: cover; mix-blend-mode: screen; }
+.cd-img--1 { left: -5px;  top: -68px;  width: 385px; height: 578px; }
+.cd-img--2 { left: -5.5px; top: -158.6px; width: 380px; height: 568px; } /* Figma: ảnh lệch trong khung 379×568 (trái -0.14%, trên 4.12%, rộng 100.27%) */
+.cd-img--3 { left: -84px; top: -24px;  width: 467px; height: 312px; }
 .cd-row { position: absolute; left: 16px; top: 16px; width: 358px; padding: 16px; border-radius: 8px; display: flex; gap: 16px; align-items: flex-start; justify-content: center; text-align: center; line-height: normal; }
 .cd-cell { display: flex; flex-direction: column; align-items: center; }
 .cd-cell b { width: 100%; font-size: 24px; font-weight: 700; color: #f5f2db; font-variant-numeric: tabular-nums; }
-.cd-cell span { width: 100%; font-size: 12px; font-weight: 400; color: #a4a183; }
-.cd-colon { font-size: 24px; font-weight: 700; color: #a4a183; white-space: nowrap; }
+.cd-cell span { width: 100%; font-size: 12px; font-weight: 400; color: #430815; }
+.cd-colon { font-size: 24px; font-weight: 700; color: #430815; white-space: nowrap; }
 
 .end-seal { position: relative; margin-top: -61px; flex: none; width: 122px; height: 122px; object-fit: cover; filter: drop-shadow(0 4px 8px rgba(37, 39, 25, .32)); }
 .page .end-date { margin-top: 5px; width: 202px; height: 50px; font-family: 'Great Vibes', cursive; font-size: 40px; line-height: normal; text-align: center; white-space: nowrap; }
